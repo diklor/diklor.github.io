@@ -6,7 +6,9 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Verdict</title>
-  <link rel='stylesheet' href='css/style.css' />
+  <link rel='stylesheet' href='css/styles.css'/>
+  <link rel='stylesheet' href='css/popup.css'/>
+  <script src=script.js></script>
 </head>
 
 
@@ -14,7 +16,7 @@
   <div class='main_wrapper'>
     <header>
       <div class='logo_label'>
-        <a class='' href='#'>Verdict: PROTOCOL
+        <p href='#'>Verdict: PROTOCOL</p>
       </div>
 
       <nav>
@@ -54,8 +56,10 @@
       </div>
 
 
-      <img src="../images/home.png" alt="Kalamit" height=250>
+      <button onclick='toggle_popup()'>Show papap</button>
 
+
+      <img src="../images/home.png" alt="Kalamit" height=250>
 
       <section class='frame2'>
         <div class="frame2__wrap">
@@ -88,6 +92,33 @@
         </nav>
       </footer>
     </div>
+
+
+
+
+    <div id='popup-1' class='popup'>
+      <div class="popup__background">
+        <div class="popup_window">
+          <div class="popup__header">
+            <h3 style='color: hsl(0 0% 70%);' id='PopupTitle'>Title</h3>
+            <b>
+              <h3>
+                <div class="close_btn" onclick='toggle_popup()'>
+                  &times;
+                </div>
+              </h3>
+            </b>
+          </div>
+
+          <div style='padding: 20px 40px;' class="popup_content">
+            <p id='PopupText'>Hel lo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </body>
 
