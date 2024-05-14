@@ -61,14 +61,14 @@ a {cursor: crosshair; }
     
     color: white;
     box-sizing: border-box;
-    overflow: hidden;
 	font: inherit;
     border-style: solid;
+    overflow: hidden;
     border-width: 0;
-
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Luminari', sans-serif;
     font-weight: lighter;
 }
+html {  overflow: auto; }
 body {
 	line-height: 1;
     min-height: 100vh;
@@ -80,6 +80,7 @@ body {
 
 
 .container__main { min-height: 100%; }
+main { overflow: auto; }
 .main_content {
     margin-top: var(--header-height);
     display: flex;
@@ -87,7 +88,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    overflow: auto;
     padding-bottom: var(--footer-height);
 }
 .main_text {
@@ -98,7 +98,7 @@ body {
     margin: 24px 10px;
 }
 rect {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     padding: 24px;
 }
@@ -108,6 +108,7 @@ rect {
 .markdown {
     color: red;
     width: 100px;
+    word-wrap: break-word;
 }
 code {
     background: black;
@@ -135,7 +136,7 @@ code {
     left: 0;
     
     position: relative;
-    margin-top: calc(var(--footer-height) * -1);
+    margin-top: calc(var(--footer-height) * 1);
     clear: both;
     
     z-index: 1;
@@ -175,9 +176,6 @@ header {
 
 
 
-
-
-
 ul { /* Header list */
     margin: 0px;
     display: flex;
@@ -193,7 +191,12 @@ li { /* List item */
     padding: 0 20px;
     box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.7);
     margin-right: 10px;
+    cursor: crosshair; 
 }
+li:hover a { /* List item */
+    color: red;
+}
+
 li:last-child {
     margin-right: 0px;
 }
@@ -212,14 +215,11 @@ li:last-child {
 
 li a { /* List item label */
     text-decoration: none;
-    font-size: 16px;
     color: gainsboro;
+    font-size: 16px;
     transition: 0.2s;
 }
-li a:hover {
-    color: white;
-    transition: 0.2s;
-}
+
 
 
 
@@ -232,8 +232,9 @@ button {
     border-width: 3px;
     transition: 0.2s;
     cursor: crosshair;
+    transition: 0.2s;
 }
-button:hover { background-color: rgba(0 ,0, 0, 0.8); }
+button:hover { background-color: rgba(0 ,0, 0, 0.8);  color: red; }
 button:after { 
     width: 100px;
     height: 100px;
@@ -246,10 +247,39 @@ button:after {
 .home_image {
     height: 100svh;
     fill: white;
-    background: transparent url(../images/most.jpg) no-repeat center;
+    background: transparent url(../images/bg1.png) no-repeat center;
     background-size: cover;
-    overflow-y: scroll;
-    z-index: -2;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    z-index: -1;
+}
+.images {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden  ;
+}
+
+.image, .image2 {
+    width: 100%;
+    height: 100svh;
+    fill: black;
+    color: black;
+    background-color: black;
+    background: transparent url(../images/ak49.png) no-repeat center;
+    opacity: 10%;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+    gap: -100px;
+}
+.image2  {
+   background: transparent url(../images/home.png) no-repeat center;
 }
 
 .bg_filler0 {

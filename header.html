@@ -1,0 +1,72 @@
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Verdict</title>
+    <link rel='stylesheet' href='css/styles.css' />
+    <link rel='stylesheet' href='css/popup.css' />
+    <link rel='stylesheet' href='consts/vars.css' />
+</head>
+
+<main class='main'>
+    <div class='menu_background'></div>
+    <div id='menu' class='menu'>
+        <div class='menu_top'>
+            <h4 class='menu_title'>Navigation</h4>
+            <button onclick='toggle_menu()'>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div style='height: fit-content' class='list_menu'>
+            <ul>
+                <li onclick='load_page("pages/home.md")'>
+                    <p>•</p>
+                    <a href='#'>Home</a>
+                </li>
+                <li onclick='load_page("download.md")'>
+                    <p>•</p>
+                    <a href='#'>Download</a>
+                </li>
+                <li onclick='load_page("updates/log.cfg")'>
+                    <p>•</p>
+                    <a href='#'>Updates</a>
+                </li>
+                <li onclick='load_page("pages/about.md")'>
+                    <p>•</p>
+                    <a href='#'>About</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class='menu_footer'>
+            <p>
+            <h4>verdict-protocol</h4>
+            </p>
+        </div>
+    </div>
+
+    <header>
+        <div class='logo_label'>
+            <p href='#'>Verdict: PROTOCOL</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li class='header__item_active'>
+                    <a href='#!'>Home</a>
+                </li>
+                <li class='header__item'>
+                    <a href='#!'>Download</a>
+                </li>
+                <li class='header__item'>
+                    <a href='#!'>Updates</a>
+                </li>
+                <li class='header__item'>
+                    <a href='#!'>About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</main>

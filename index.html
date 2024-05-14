@@ -10,84 +10,29 @@
   <link rel='stylesheet' href='css/popup.css' />
   <link rel='stylesheet' href='css/nav_menu.css' />
   <link rel='stylesheet' href='consts/vars.css' />
-  <script src='node_modules/showdown/dist/showdown.js'></script>
   <script src=scripts/script.js></script>
+  <script src='node_modules/showdown/dist/showdown.js'></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      $("#template_footer").load("footer.html");
+      $("#template_header").load("header.html");
+    });
+  </script>
 </head>
 
 
 <body>
   <div class='container__main'>
-    <div class='main'>
-      <div id='menu' class='menu'>
-        <div class='menu_top'>
-          <h4 class='menu_title'>Navigation</h4>
-          <button onclick='toggle_menu()'>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
+    <main>
+      <div id='template_header'></div>
 
-        <div style='height: fit-content' class='list_menu'>
-          <ul>
-            <li>
-              <p>•</p>
-              <a href='#'>Home</a>
-            </li>
-            <li>
-              <p>•</p>
-              <a href='#'>Download</a>
-            </li>
-            <li>
-              <p>•</p>
-              <a href='#'>Updates</a>
-            </li>
-            <li>
-              <p>•</p>
-              <a href='#'>About</a>
-            </li>
-          </ul>
-        </div>
 
-        <div class='menu_footer'>
-          <p>
-          <h4>verdict-protocol</h4>
-          </p>
-        </div>
+      <!-- <body class='home_image'></body> -->
+
+      <div class='images'>
+        <div class='image'></div>
       </div>
-
-
-
-
-      <body class='home_image'></body>
-
-      <header>
-        <div class='logo_label'>
-          <p href='#'>Verdict: PROTOCOL</p>
-        </div>
-
-        <nav>
-          <ul>
-            <li class='header__item_active'>
-              <a href='#!'>Home</a>
-            </li>
-            <li class='header__item'>
-              <a href='#!'>Download</a>
-            </li>
-            <li class='header__item'>
-              <a href='#!'>Updates</a>
-            </li>
-            <li class='header__item'>
-              <a href='#!'>About</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-
-
-
-
 
       <div class='main_content'>
         <rect>
@@ -106,13 +51,10 @@
           </div>
         </rect>
 
-        
-        </iframe>
+
+        <button onclick='toggle_popup("Title","Not title")'>Show papap</button>
 
         <div id='main_text' class='main_text'>
-          <button onclick='toggle_popup("Popup hello")'>Show papap</button>
-
-          <!-- <img src="../images/home.png" alt="Kalamit" height=250> -->
 
           <section class='frame2'>
             <div class="frame2__wrap">
@@ -121,50 +63,33 @@
           </section>
         </div>
       </div>
-    </div>
+    </main>
   </div>
 
 
-  <body class='footer_image'></body>
-
-  <div class="footer__wrapper">
-    <footer>
-      <nav>
-        <ul>
-          <li class='footer_li'>
-            <a href='#!'>Faq</a>
-          </li>
-          <li class='footer_li'>
-            <a href='#!'>Privacy Policy</a>
-          </li>
-          <li class='footer_li'>
-            <a href='#!'>Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </footer>
+  <div id='template_footer'></div>
 
 
-    <div id='popup' class='popup'>
-      <div class="popup__background"></div>
-      <div class="popup_window">
-        <div class="popup__header">
-          <h3 style='color: hsl(0 0% 70%);' id='PopupTitle'>Title</h3>
-          <b>
-            <h3>
-              <div class="close_btn" onclick='toggle_popup()'>
-                &times;
-              </div>
-            </h3>
-          </b>
-        </div>
-
-        <div style='padding: 20px 40px;' class="popup_content">
-          <p id='PopupContentText'>Hel lo</p>
-        </div>
+  <div id='popup' class='popup'>
+    <div class="popup__background"></div>
+    <div class="popup_window">
+      <div class="popup__header">
+        <h3 style='color: hsl(0 0% 70%);' id='PopupTitle'>Title</h3>
+        <b>
+          <h3>
+            <div class="close_btn" onclick='toggle_popup()'>
+              &times;
+            </div>
+          </h3>
+        </b>
+      </div>
+      <div style='padding: 20px 40px;' class="popup_content">
+        <p id='PopupContentText'>Hel lo</p>
       </div>
     </div>
   </div>
 </body>
+
+
 
 </html>

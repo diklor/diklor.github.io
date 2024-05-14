@@ -1,5 +1,10 @@
 const menu = document.querySelector('.menu');
-var converter = new showdown.Converter();
+
+window.onload = function (): void {
+    $("#template_header").load("header.html");
+}
+
+
 
 
 function delete_button(): void {
@@ -16,16 +21,26 @@ function toggle_popup(title_text: string, content_text: string) {
 }
 function toggle_menu() {
     const menu = document.getElementById('menu');
-    if (menu) { menu.classList.toggle('active');  }
+    if (menu) { menu.classList.toggle('active'); }
 }
 
 
 
-const myRequest = new Request('https://raw.githubusercontent.com/diklor/verdict_doc/main/general/console/commands.md');
-fetch(myRequest)
-    .then((response) => response.text())
-    .then((text: string) => {
-        console.log(converter.makeHtml(text));
-        document.querySelector('.main_text')!.insertAdjacentHTML('beforeend', `<p class='markdown'>${converter.makeHtml(text)}</p>`);
-    })
-    .catch(error => console.error(error));
+function load_page(page_path: string) {
+    toggle_menu()
+    const main_text = document.querySelector('.main_text')!;
+    while (main_text.firstChild) {
+        main_text.removeChild(main_text.firstChild);
+    }
+    var converter = new showdown.Converter();
+    const myRequest = new Request('https://raw.githubusercontent.com/diklor/verdict_doc/main/' + page_path);
+    fetch(myRequest)
+        .then((response) => response.text())
+        .then((text: string) => {
+            main_text.insertAdjacentHTML('beforeend', `<p class='markdown'>${converter.makeHtml(text)}</p>`);
+        })
+        .catch((error) => {
+            console.error(error)
+            toggle_popup('Error', error);
+        });
+}
