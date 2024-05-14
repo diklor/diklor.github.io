@@ -31,6 +31,7 @@
     border-width: 4px;
     border-color: rgba(0 ,0, 0, 0.2);
     box-shadow: 0 0 300px 100px rgb(0, 0, 0, 0.7);
+    transition: 1s;
 }
 .popup__header {
     width: 100%;
@@ -58,6 +59,6 @@
     display: block;
 }
 .popup.active .popup_window {
-    /* transform: translate(-50%, -50%) scale(1); */
+    transform: translate(-50%, -50%) scale(1);
     transition: all 0.3s ease-out ;
 }

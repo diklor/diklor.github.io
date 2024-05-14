@@ -51,6 +51,7 @@ h5 { font-size: 0.6em; }
 h6 { font-size: 4.25em; }
 
 b { font-weight: 900; }
+a {cursor: crosshair; }
 
 
 
@@ -71,6 +72,7 @@ b { font-weight: 900; }
     font-weight: lighter;
 }
 body {
+    min-height: 100vh;
     background-color: rgb(10, 10, 10);
 }
 .main_content {
@@ -124,6 +126,7 @@ header {
     left: 0;
     right: 0;
     padding: 0px 1px;
+    padding-left: 46px;
 
     box-shadow: inset 0 0 80px 0 rgba(0, 0, 0, 0.6);
 }
@@ -210,6 +213,7 @@ button {
     border-color: black;
     border-width: 3px;
     transition: 0.2s;
+    cursor: crosshair;
 }
 button:hover {
     background-color: rgba(0 ,0, 0, 0.8);

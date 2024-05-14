@@ -6,13 +6,41 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Verdict</title>
-  <link rel='stylesheet' href='css/styles.css'/>
-  <link rel='stylesheet' href='css/popup.css'/>
+  <link rel='stylesheet' href='css/styles.css' />
+  <link rel='stylesheet' href='css/popup.css' />
+  <link rel='stylesheet' href='css/nav_menu.css' />
   <script src=script.js></script>
 </head>
 
 
 <body>
+  <div id='menu' class='menu'>
+    <div class='menu_burger'>
+      <h3 class='menu_title'>Navigation</h2>
+      <button onclick='toggle_menu()'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div style='height: fit-content' class='list_menu'>
+      <ul>
+        <li>  <p>•</p>
+          <a href='#'>Home</a> </li>
+        <li>  <p>•</p>
+          <a href='#'>Download</a> </li>
+        <li>  <p>•</p>
+          <a href='#'>Updates</a> </li>
+        <li>  <p>•</p>
+          <a href='#'>Sd</a> </li>
+      </ul>
+    </div>
+    <div class='menu_footer'>
+      <p><h4>verdict-protocol</h4></p>
+    </div>
+  </div>
+
   <div class='main_wrapper'>
     <header>
       <div class='logo_label'>
@@ -36,6 +64,10 @@
         </ul>
       </nav>
     </header>
+
+
+
+
 
 
 
@@ -68,7 +100,7 @@
       </section>
 
       <blockquote>sassdasdds</blockquote>
-      <iframe id="game-element" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write; web-share; accelerometer; magnetometer; gyroscope" name="gameFrame" scrolling="no" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads" src="https://games.poki.com/458768/b6d57fcf-bfa0-410b-99bd-2f654f09c65e?tag=pg-v5.12.0+35c061c491a800efb1e9c8532bcae25ba8ab1bc5&amp;site_id=3&amp;iso_lang=en&amp;country=RU&amp;poki_url=https://poki.com/en/g/skibidi-shooter&amp;gdhoist=yes&amp;nonPersonalized=n&amp;familyFriendly=n&amp;categories=3,77,96,385,1126,1139,1140,1141,1164,1190,1197&amp;ab=c7254f258dd9dcd2fe1dfb066e596422c9d7c097&amp;experiment=a-a2249bbe&amp;special_condition=landing" title="Game" class="Clsn52HE2ZzhoBMbiAF6"></iframe>
+      <!-- <iframe id="game-element" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write; web-share; accelerometer; magnetometer; gyroscope" name="gameFrame" scrolling="no" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads" src="https://games.poki.com/458768/b6d57fcf-bfa0-410b-99bd-2f654f09c65e?tag=pg-v5.12.0+35c061c491a800efb1e9c8532bcae25ba8ab1bc5&amp;site_id=3&amp;iso_lang=en&amp;country=RU&amp;poki_url=https://poki.com/en/g/skibidi-shooter&amp;gdhoist=yes&amp;nonPersonalized=n&amp;familyFriendly=n&amp;categories=3,77,96,385,1126,1139,1140,1141,1164,1190,1197&amp;ab=c7254f258dd9dcd2fe1dfb066e596422c9d7c097&amp;experiment=a-a2249bbe&amp;special_condition=landing" title="Game" class="Clsn52HE2ZzhoBMbiAF6"></iframe> -->
     </div>
 
 
@@ -96,7 +128,7 @@
 
 
 
-    <div id='popup-1' class='popup'>
+    <div id='popup' class='popup'>
       <div class="popup__background">
         <div class="popup_window">
           <div class="popup__header">

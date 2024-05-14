@@ -1,8 +1,15 @@
+const menu = document.querySelector('menu');
+
+
 function delete_button() {
-    var element = document.getElementById('0')
+    const element = document.getElementById('0')
     element.parentNode.removeChild(element)
 }
 function toggle_popup() {
-    var popup = document.getElementById('popup-1')
+    const popup = document.getElementById('popup');
     popup.classList.toggle('active');
+}
+function toggle_menu() {
+    const menus = document.getElementById('menu');
+    menus.classList.toggle('active');
 }
