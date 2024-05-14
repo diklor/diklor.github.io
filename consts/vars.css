@@ -1,0 +1,5 @@
+:root {
+    --mobile_min_width: 2800px;
+    --header-height: 72px;
+    --footer-height: 200px;
+}

@@ -9,148 +9,161 @@
   <link rel='stylesheet' href='css/styles.css' />
   <link rel='stylesheet' href='css/popup.css' />
   <link rel='stylesheet' href='css/nav_menu.css' />
-  <script src=script.js></script>
+  <link rel='stylesheet' href='consts/vars.css' />
+  <script src='node_modules/showdown/dist/showdown.js'></script>
+  <script src=scripts/script.js></script>
 </head>
 
 
 <body>
-  <div id='menu' class='menu'>
-    <div class='menu_burger'>
-      <h3 class='menu_title'>Navigation</h2>
-      <button onclick='toggle_menu()'>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-    <div style='height: fit-content' class='list_menu'>
-      <ul>
-        <li>  <p>•</p>
-          <a href='#'>Home</a> </li>
-        <li>  <p>•</p>
-          <a href='#'>Download</a> </li>
-        <li>  <p>•</p>
-          <a href='#'>Updates</a> </li>
-        <li>  <p>•</p>
-          <a href='#'>Sd</a> </li>
-      </ul>
-    </div>
-    <div class='menu_footer'>
-      <p><h4>verdict-protocol</h4></p>
-    </div>
-  </div>
-
-  <div class='main_wrapper'>
-    <header>
-      <div class='logo_label'>
-        <p href='#'>Verdict: PROTOCOL</p>
-      </div>
-
-      <nav>
-        <ul>
-          <li class='header__item_active'>
-            <a href='#!'>Home</a>
-          </li>
-          <li class='header__item'>
-            <a href='#!'>Download</a>
-          </li>
-          <li class='header__item'>
-            <a href='#!'>Updates</a>
-          </li>
-          <li class='header__item'>
-            <a href='#!'>sd</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-
-
-
-
-
-
-    <body class='intro_image'></body>
-
-    <div class='main_content'>
-      <div class='main_text'>
-        <b>
-          <h1>#1 Trending</h1>
-        </b>
-        <h1>Extremely good thing</h1>
-        <p>
-          Lorem ipsum do <br>lor, sit amet consectetur adipisicing elit. Minima
-          tempora ipsa illum est maiores vel, optio cumque fugiat. Saepe,
-          provident sed! Sit iusto repellendus, magnam ullam repudiandae vel
-          dicta quas?
-        </p>
-      </div>
-
-
-      <button onclick='toggle_popup()'>Show papap</button>
-
-
-      <img src="../images/home.png" alt="Kalamit" height=250>
-
-      <section class='frame2'>
-        <div class="frame2__wrap">
-          <h2>Cool things happening</h2>
+  <div class='container__main'>
+    <div class='main'>
+      <div id='menu' class='menu'>
+        <div class='menu_top'>
+          <h4 class='menu_title'>Navigation</h4>
+          <button onclick='toggle_menu()'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-      </section>
 
-      <blockquote>sassdasdds</blockquote>
-      <!-- <iframe id="game-element" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write; web-share; accelerometer; magnetometer; gyroscope" name="gameFrame" scrolling="no" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads" src="https://games.poki.com/458768/b6d57fcf-bfa0-410b-99bd-2f654f09c65e?tag=pg-v5.12.0+35c061c491a800efb1e9c8532bcae25ba8ab1bc5&amp;site_id=3&amp;iso_lang=en&amp;country=RU&amp;poki_url=https://poki.com/en/g/skibidi-shooter&amp;gdhoist=yes&amp;nonPersonalized=n&amp;familyFriendly=n&amp;categories=3,77,96,385,1126,1139,1140,1141,1164,1190,1197&amp;ab=c7254f258dd9dcd2fe1dfb066e596422c9d7c097&amp;experiment=a-a2249bbe&amp;special_condition=landing" title="Game" class="Clsn52HE2ZzhoBMbiAF6"></iframe> -->
-    </div>
+        <div style='height: fit-content' class='list_menu'>
+          <ul>
+            <li>
+              <p>•</p>
+              <a href='#'>Home</a>
+            </li>
+            <li>
+              <p>•</p>
+              <a href='#'>Download</a>
+            </li>
+            <li>
+              <p>•</p>
+              <a href='#'>Updates</a>
+            </li>
+            <li>
+              <p>•</p>
+              <a href='#'>About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class='menu_footer'>
+          <p>
+          <h4>verdict-protocol</h4>
+          </p>
+        </div>
+      </div>
 
 
 
-    <body class='footer_image'></body>
 
-    <div class="footer__wrapper">
-      <footer>
+      <body class='home_image'></body>
+
+      <header>
+        <div class='logo_label'>
+          <p href='#'>Verdict: PROTOCOL</p>
+        </div>
+
         <nav>
           <ul>
-            <li class='footer_li'>
-              <a href='#!'>Faq</a>
+            <li class='header__item_active'>
+              <a href='#!'>Home</a>
             </li>
-            <li class='footer_li'>
-              <a href='#!'>Privacy Policy</a>
+            <li class='header__item'>
+              <a href='#!'>Download</a>
             </li>
-            <li class='footer_li'>
-              <a href='#!'>Contact</a>
+            <li class='header__item'>
+              <a href='#!'>Updates</a>
+            </li>
+            <li class='header__item'>
+              <a href='#!'>About</a>
             </li>
           </ul>
         </nav>
-      </footer>
-    </div>
+      </header>
 
 
 
 
-    <div id='popup' class='popup'>
-      <div class="popup__background">
-        <div class="popup_window">
-          <div class="popup__header">
-            <h3 style='color: hsl(0 0% 70%);' id='PopupTitle'>Title</h3>
+
+
+      <div class='main_content'>
+        <rect>
+          <div style='padding: 20px 10px;'>
             <b>
-              <h3>
-                <div class="close_btn" onclick='toggle_popup()'>
-                  &times;
-                </div>
-              </h3>
+              <h1>Released!</h1>
+              <hr>
             </b>
+            <h1 class='gray_text'>Extremely good thing</h1>
+            <p>
+              Lorem ipsum do lor, sit amet consectetur adipisicing elit. Minima
+              tempora ipsa illum est maiores vel, optio cumque fugiat. Saepe,
+              provident sed! Sit iusto repellendus, magnam ullam repudiandae vel
+              dicta quas?
+            </p>
           </div>
+        </rect>
 
-          <div style='padding: 20px 40px;' class="popup_content">
-            <p id='PopupText'>Hel lo</p>
-          </div>
+        
+        </iframe>
+
+        <div id='main_text' class='main_text'>
+          <button onclick='toggle_popup("Popup hello")'>Show papap</button>
+
+          <!-- <img src="../images/home.png" alt="Kalamit" height=250> -->
+
+          <section class='frame2'>
+            <div class="frame2__wrap">
+              <h2>Cool things happening</h2>
+            </div>
+          </section>
         </div>
       </div>
     </div>
+  </div>
 
 
+  <body class='footer_image'></body>
 
+  <div class="footer__wrapper">
+    <footer>
+      <nav>
+        <ul>
+          <li class='footer_li'>
+            <a href='#!'>Faq</a>
+          </li>
+          <li class='footer_li'>
+            <a href='#!'>Privacy Policy</a>
+          </li>
+          <li class='footer_li'>
+            <a href='#!'>Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+
+    <div id='popup' class='popup'>
+      <div class="popup__background"></div>
+      <div class="popup_window">
+        <div class="popup__header">
+          <h3 style='color: hsl(0 0% 70%);' id='PopupTitle'>Title</h3>
+          <b>
+            <h3>
+              <div class="close_btn" onclick='toggle_popup()'>
+                &times;
+              </div>
+            </h3>
+          </b>
+        </div>
+
+        <div style='padding: 20px 40px;' class="popup_content">
+          <p id='PopupContentText'>Hel lo</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
