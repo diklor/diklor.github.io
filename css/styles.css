@@ -52,28 +52,34 @@ a {cursor: crosshair; }
 
 
 @font-face {
-    font-family: 'Core Humanist', sans-serif;
+    font-family: CoreHumanist;
     src: url('../fonts/CoreHumanistSans.otf'),
 }
   
 
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/inter/regular.ttf);
+}
+
 * {
-    
     color: white;
     box-sizing: border-box;
 	font: inherit;
     border-style: solid;
-    overflow: hidden;
     border-width: 0;
-    font-family: 'Luminari', sans-serif;
+    font-family: 'CoreHumanist';
+    font-family: "CoreHumanist", sans-serif;
     font-weight: lighter;
 }
-html {  overflow: auto; }
+/* html {  overflow: auto; } */
 body {
 	line-height: 1;
     min-height: 100vh;
     background-color: rgb(10, 10, 10);
     height: 100%;
+    
 }
 
 
@@ -90,6 +96,8 @@ main { overflow: auto; }
     gap: 50px;
     padding-bottom: var(--footer-height);
 }
+
+
 .main_text {
     margin: 40px 10px;
 }
@@ -265,22 +273,6 @@ button:after {
     overflow: hidden  ;
 }
 
-.image, .image2 {
-    width: 100%;
-    height: 100svh;
-    fill: black;
-    color: black;
-    background-color: black;
-    background: transparent url(../images/ak49.png) no-repeat center;
-    opacity: 10%;
-    background-size: cover;
-    overflow: hidden;
-    z-index: -1;
-    gap: -100px;
-}
-.image2  {
-   background: transparent url(../images/home.png) no-repeat center;
-}
 
 .bg_filler0 {
    position: relative;

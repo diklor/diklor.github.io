@@ -1,0 +1,65 @@
+.box1 {
+    width: 100%;
+    height: 279px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
+    background: #151515;
+    box-shadow: inset 0 0 60px black, 0 0 200px 150px black;
+}
+
+
+.image1, .image2 {
+    width: 100%;
+    height: 100svh;
+    fill: black;
+    color: black;
+    background-color: black;
+    background: transparent url(../images/ak49.png) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+    gap: -100px;
+}
+.image2  {
+   background: transparent url(../images/home.png) no-repeat center;
+}
+
+
+
+.button1 {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    gap: 10px;
+
+    width: 240px;
+    height: 40px;
+
+    background: linear-gradient(180deg, #871A1A 0%, #7D0000 100%);
+    box-shadow: 0px 0px 7.7px black;
+    border-radius: 10px;
+
+   
+
+    font-weight: 500;
+    text-align: center;
+
+    color: red;
+
+
+    box-shadow: 0 0 60px 14px black;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+}
+
+span {
+    stroke: 10px red;
+}
