@@ -2,7 +2,7 @@
     --width_p: 350px;
 }
 .menu_background {
-    width: 100svh;
+    width: 100svw;
     height: 100svh;
     position: fixed;
     background-color: rgba(0, 0, 0, 1);

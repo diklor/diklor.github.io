@@ -58,20 +58,14 @@ a {cursor: crosshair; }
   
 
 
-@font-face {
-    font-family: Inter;
-    src: url(../fonts/inter/regular.ttf);
-}
-
 * {
     color: white;
     box-sizing: border-box;
-	font: inherit;
     border-style: solid;
     border-width: 0;
-    font-family: 'CoreHumanist';
-    font-family: "CoreHumanist", sans-serif;
-    font-weight: lighter;
+    flex-direction: column;
+	font: inherit;
+    font-family: 'Inter', sans-serif;
 }
 /* html {  overflow: auto; } */
 body {
@@ -79,7 +73,6 @@ body {
     min-height: 100vh;
     background-color: rgb(10, 10, 10);
     height: 100%;
-    
 }
 
 
@@ -261,17 +254,7 @@ button:after {
     overflow: hidden;
     z-index: -1;
 }
-.images {
-    position: absolute;
-    width: 100%;
-    height: 1200px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden  ;
-}
+
 
 
 .bg_filler0 {
