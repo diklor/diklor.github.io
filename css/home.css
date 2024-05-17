@@ -61,10 +61,14 @@
 /* Buttons */
 
 .buttons__wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px black;
 
     gap: 10px;
 }

@@ -154,6 +154,7 @@
     /* .menu.active(); */
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 4
+00px) {
    .menu { width: 100%; left: -100% };
 }
