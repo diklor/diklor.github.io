@@ -60,46 +60,57 @@
             <a class='collapsible_btn'>
               <h3>How to my get system bitness?</h3><span>&#9650;</span>
             </a>
-            
+
             <div class='collapsible'>
               <br>
-              <h2><b>Linux</b></h2>
-              <hr>
-              <br>
+              <h2><b><img width='30' height='30' src='/assets/images/windows.png' title='Windows' alt='Windows'>&nbsp;
+                  Windows</b></h2>
+              <hr> <br>
+              <p>
+                1. Press <mark>Win + R</mark><br>
+                2. Type <mark>cmd</mark><br>
+                3. Enter this:
+                <code>wmic os get osarchitecture</code>
+              </p>
+              <h3>Sample output:</h3>
+              <code class='code_output'>OSArchitecture<br>
+                  <mark>64</mark></code>
+              <p><i>
+                  Or click the Windows button, select Settings > System > About System type (Under Device
+                  specifications)
+                </i></p>
+              <br> <br>
+              <br> <br>
+
+              <h2><b><img width='30' height='30' src='/assets/images/linux.png' title='Linux' alt='Linux'>&nbsp;
+                  Linux</b></h2>
+              <hr> <br>
               <p>
                 Open the CLI to a Linux server by SSH using Putty.<br>
                 Type the following command line:
-                <code>uname –a</code>
-              </p>
-              <h3>Sample output</h3>
-              <p>
-                <code>$ getconf LONG_BIT</code>
-                <br>
+                <code>uname –m</code>
+              <h3>Sample output:</h3>
+              <code class='code_output'>64</code>
+              <code class='code_output'>32</code>
 
-                <hr>
-                <i>x86_64 GNU/Linux</i> indicates it's a <b>64 bit</b> Linux kernel.<br>
-                <hr class='hr_small'>
-                <i>i386/i486/i586/i686</i> indicates it's a <b>32 bit</b> Linux kernel
-                <hr>
-              </p>
+              <br> <br>
+
+              <h3>Second way:</h3>
+              <code>$ getconf LONG_BIT</code>
+
+              <br> <br>
+              <br> <br>
+
               <br>
-              <h2><b>Windows</b></h2>
-              <p>
-                <br>
-                Open the CLI to a Linux server by SSH using Putty.<br>
-                Type the following command line:
+              <h2><b><img width='30' height='30' src='/assets/images/apple.png' title='Mac OS' alt='Mac OS'>&nbsp;
+                  Mac OS</b></h2>
+              <hr> <br>
+              <p>Execute this:</p>
+              <code>lipo -info /bin/ls </code>
+              <h3>Sample output:</h3>
+              <code class='code_output'>Non-fat file: /bin/ls is architecture: <mark>x86_64</mark></code>
+              <br> <br>
 
-                <br><br><code>uname –a</code><br><br>
-
-              </p>
-              <h3>Sample output</h3>
-              <p>
-                <code>$ getconf LONG_BIT</code>
-                <br>
-
-                <i>x86_64 GNU/Linux</i> indicates it's a <b>64 bit</b> Linux kernel.<br>
-                <i>i386/i486/i586/i686</i> indicates it's a <b>32 bit</b> Linux kernel
-              </p>
             </div>
           </div>
         </rect>

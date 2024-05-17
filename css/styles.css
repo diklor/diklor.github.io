@@ -141,6 +141,9 @@ code {
     display: block;
     box-shadow: inset 0 0 16px 0 hsl(0, 0%, 100%, 0.3);
 }
+.code_output {
+    border-left: 7px solid gray;
+}
 
 
 
@@ -355,6 +358,7 @@ button:after {
 
 
 hr {
+    --color: hsl(0 0% 25%);
     text-align: center;
     background-color: hsl(0 0% 25%);
     height: 2px;
@@ -364,7 +368,14 @@ hr {
     height: 1px;
 }
 .hr_gradient {
-    background: linear-gradient(90deg, transparent, gainsboro, transparent);
+    --color: gainsboro;
+    background: linear-gradient(90deg, transparent, var(--color), transparent);
+}
+
+
+
+mark {
+    background-color: hsl(0 0% 10%);
 }
   
 
