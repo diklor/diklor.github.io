@@ -382,6 +382,6 @@ mark {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
     header nav { display: none; }
 }
