@@ -24,7 +24,12 @@ function toggle_menu() {
 
 
 function load_page(page_path) {
+    if (page_path.startsWith('https')) {
+        window.open(page_path, '_blank')
+        return
+    }
     toggle_menu()
+
     const main_text = document.querySelector('.main_text');
     while (main_text.firstChild) {
         main_text.removeChild(main_text.firstChild);
