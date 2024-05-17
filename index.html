@@ -6,12 +6,13 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Verdict</title>
+  <link rel='stylesheet' href='consts/vars.css' />
+  <link rel='stylesheet' href='css/fonts.css' />
+  
   <link rel='stylesheet' href='css/styles.css' />
   <link rel='stylesheet' href='css/popup.css' />
   <link rel='stylesheet' href='css/nav_menu.css' />
   <link rel='stylesheet' href='css/home.css' />
-  <link rel='stylesheet' href='consts/vars.css' />
-  <link rel='stylesheet' href='css/fonts.css' />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src=scripts/script.js></script>
   <script src=scripts/home.js></script>
@@ -57,26 +58,31 @@
           <h1 style='text-shadow: 0 6px 20px black;'>Download game here</h1>
         </b>
 
-        <button onclick='toggle_popup("Title","Not title")'>Show papap</button>
-        
+
         <div class='buttons__wrapper'>
-          <a id='download_btn' href='https://matix.li/23b30224815a'>
+          <a class='download_btn' href='downloading.html'>
             <img width='30' height='30' src='/assets/images/windows.png' title='Windows' alt='Windows'>
             <span>Windows</span>
           </a>
-          <a id='download_btn' style='--color_hue: 120;' href='https://matix.li/23b30224815a'>
+          <a class='download_btn' style='--color_hue: 120;' href='downloading.html'>
             <img width='30' height='30' src='/assets/images/linux.png' title='Linux' alt='Linux'>
             <span>Linux</span>
           </a>
-          
+          <a class='download_btn' style='--color_sat: 0%;' href='downloading.html'>
+            <img width='30' height='30' src='/assets/images/apple.png' title='Linux' alt='Linux'>
+            <span>Mac OS</span>
+          </a>
         </div>
+
+        <button onclick='toggle_popup("Title","Not title")'>More</button>
+
 
         <div id='main_text' class='main_text'></div>
 
 
 
         <div class='box1'>
-          <p style='font-weight: lighter;'>Game is released play now fastom</p>
+          <p style='font-weight: lighter;'>Game is released play now like right now</p>
         </div>
 
         <section class='frame2'>

@@ -39,7 +39,7 @@
 
     transition: all 0.3s;
     
-    z-index: 1;
+    z-index: 10;
 }
 
 .menu.active {
@@ -96,9 +96,9 @@
 
 
 .list_menu {
-    height: fit-content;
+    height: 100%;
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
@@ -108,20 +108,31 @@
     width: 100%;
 }
 
+
+
 .list_menu li { width: 100%; height: 60px; }
 .list_menu li a { color: gainsboro; }
 
-
-.list_menu li a {
-    color: gainsboro;
-}
-
 .list_menu li:hover a {
-    transform: translate(10px, 0);
     border-style: solid;
     list-style: circle;
     color: red;
 }
+
+
+
+.list_menu li::before { /* Circle */
+    content: '•';
+    color: white;
+    font-size: 0px;
+    transition: font-size 0.3s, color 0.2s;
+ }
+ .list_menu li:hover::before {
+    font-size: 30px;
+    color: red;
+ }
+
+
 
 
 .list_menu p {
@@ -154,7 +165,6 @@
     /* .menu.active(); */
 }
 
-@media screen and (max-width: 4
-00px) {
+@media screen and (max-width: 400px) {
    .menu { width: 100%; left: -100% };
 }

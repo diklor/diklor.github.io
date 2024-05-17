@@ -51,11 +51,9 @@ a {cursor: crosshair; }
 
 
 
-@font-face {
-    font-family: CoreHumanist;
-    src: url('../fonts/CoreHumanistSans.otf'),
-}
-  
+
+
+
 
 
 * {
@@ -64,8 +62,9 @@ a {cursor: crosshair; }
     border-style: solid;
     border-width: 0;
     flex-direction: row;
-	font: inherit;
-    font-family: 'Inter', sans-serif;
+
+    font-family: Inter;
+    font-weight: 300;
 }
 /* html {  overflow: auto; } */
 body {
@@ -73,6 +72,7 @@ body {
     min-height: 100vh;
     background-color: rgb(10, 10, 10);
     height: 100%;
+
 }
 
 
@@ -86,7 +86,7 @@ main { overflow: auto; }
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     padding-bottom: var(--footer-height);
 }
 
@@ -98,11 +98,22 @@ main { overflow: auto; }
     color: hsl(0, 0%, 80%);
     margin: 24px 10px;
 }
-rect {
-    background-color: rgba(0, 0, 0, 0.8);
+rect, .rect2 { /* rect { */
+    background-color: hsl(0 0% 20%);
+    box-shadow: inset 0 0 60px 0 rgba(0, 0, 0, 0.4);
     width: 100%;
     padding: 24px;
 }
+.rect2 {
+    background-color: black;
+}
+.rect_div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 26px;
+    gap: 10px;
+}
+
 
 
 
@@ -111,20 +122,30 @@ rect {
     width: 100px;
     word-wrap: break-word;
 }
+
+
+
+
 code {
     background: black;
-    border: 1px solid #ddd;
-    border-left: 3px solid #f36d33;
-    color: #666;
+    border: 1px solid dimgray;
+    border-left: 3px solid red;
+    color: hsl(0 0% 50%);
     font-family: monospace;
     font-size: 15px;
     line-height: 1.6;
-    margin-bottom: 1.6em;
+    margin: 10px 0;
     max-width: 100%;
     overflow: auto;
     padding: 1em 1.5em;
     display: block;
+    box-shadow: inset 0 0 16px 0 hsl(0, 0%, 100%, 0.3);
 }
+
+
+
+
+
 
 .footer__wrapper {
     display: flex;
@@ -140,7 +161,7 @@ code {
     margin-top: calc(var(--footer-height) * 1);
     clear: both;
     
-    z-index: 1;
+    z-index: 5;
 }
 footer {
     border-radius: 8px;
@@ -164,6 +185,7 @@ header {
     right: 0;
     padding: 0px 1px;
     padding-left: 46px;
+    z-index: 5;
 
     box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, 0.4);
 }
@@ -183,10 +205,12 @@ ul { /* Header list */
     flex-wrap: wrap;
     flex-direction: row;
     padding: 0;
+    height: 100%;
 }
 li { /* List item */   
     background-color: rgba(0, 0, 0, 0.5);
-    height: var(--header-height);
+    height: 100%;
+
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -244,6 +268,66 @@ button:after {
 
 
 
+ /* Collapsible */
+
+ .collapsible_btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0 ,0, 0, 0.3);
+    font-size: 14px;
+    padding: 16px;
+ }
+
+ .collapsible_btn :first-child { transition: padding-left 0.2s, color 0.2s; }
+ .collapsible_btn.active :first-child { padding-left: 20px; color: red; }
+
+
+ .collapsible_btn::before { /* Circle */
+    content: '•';
+    position: absolute;
+    color: red;
+    font-size: 0px;
+    transition: font-size 0.3s;
+ }
+ .collapsible_btn.active::before {
+    font-size: 30px;
+ }
+
+ .collapsible_btn span { transition: color 0.2s, transform 0.5s; }
+ .collapsible_btn.active span { color: red; transform: rotate(540deg); }
+
+
+ .collapsible_btn span {
+    content: '&#9650;';
+ }
+
+
+
+
+ .collapsible {
+    overflow-y: hidden;
+    height: 0px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    border: none;
+    background: repeating-linear-gradient(to bottom, transparent 15%, hsl(0, 0%, 12%) 30%, transparent 45%)
+ }
+ .collapsible.active {
+    height: 100%;
+    padding: 2em;
+    margin: 1em -2em;
+    border: 10px groove hsl(0, 0%, 10%);
+ }
+
+ /* Collapsible end */
+
+
+
 
 .home_image {
     height: 100svh;
@@ -270,6 +354,19 @@ button:after {
 
 
 
+hr {
+    text-align: center;
+    background-color: hsl(0 0% 25%);
+    height: 2px;
+    width: 100%;
+  }
+.hr_small {
+    height: 1px;
+}
+.hr_gradient {
+    background: linear-gradient(90deg, transparent, gainsboro, transparent);
+}
+  
 
 
 

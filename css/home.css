@@ -66,15 +66,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: 20px 40px;
+    padding: 20px 80px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 20px black;
 
     gap: 10px;
 }
 
-#download_btn {
+.download_btn {
     --color_hue: 0;
+    --color_sat: 2%;
     position: relative;
 
     display: flex;
@@ -89,7 +90,7 @@
     font-weight: 500;
     text-decoration: none;
     
-    background: linear-gradient(180deg, hsl(var(--color_hue), 100%, 30%)  0%, hsla(var(--color_hue), 100%, 30%, 0.4) 100%);
+    background: linear-gradient(180deg, hsl(var(--color_hue), calc(100 * var(--color_sat)), 30%)  0%, hsla(var(--color_hue), calc(100 * var(--color_sat)), 30%, 0.4) 100%);
     border-radius: 10px;
 
     overflow: hidden;
@@ -103,32 +104,18 @@
 img {
     background-color: transparent;
 }
-#download_btn:hover {
+.download_btn:hover {
     /* width: calc(240px * 1.15); */
     border: 1px solid rgba(0, 0, 0, 1);
 }
 
-#download_btn[data]:hover:after {
-    content: attr(data);
-    padding: 4px 8px;
-    color: rgba(0,0,0,0.5);
-    position: absolute;
-    left: 0;
-    top: 100%;
-    white-space: nowrap;
-    z-index: 2;
-    border-radius: 5px ;
-    background: rgba(0,0,0,0.5);
-}
 
 
 
 
 
 
-
-
-#download_btn:before {
+.download_btn:before {
     --size: 100%;
     content: '';
     position: absolute;
@@ -140,19 +127,18 @@ img {
     transition: opacity 0.6s ease;
 }
 
-#download_btn:hover:before {
+.download_btn:hover:before {
     opacity: 100%;
 }
 
 
 
-#download_btn span {
+.download_btn span {
    color: white;
    font-weight: 600;
    text-shadow: 0 0 6px black;
    text-decoration: none;
    text-decoration-color: cyan;
-   z-index: 1;
 }
 
 /* Buttons end */
@@ -162,4 +148,20 @@ img {
 .bg_text {
     background-color: black;
     padding: 20px;
+}
+
+
+
+
+.downloading_text {
+    text-shadow: 0 6px 20px black;
+    color: gainsboro;
+    opacity: 0%;
+    transition: opacity 0.3s;
+}
+.downloading_text.active {
+    opacity: 100%;
+}
+.downloading_text.flash {
+    color: red;
 }

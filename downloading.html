@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Verdict</title>
+  <link rel='stylesheet' href='css/styles.css' />
+  <link rel='stylesheet' href='css/popup.css' />
+  <link rel='stylesheet' href='css/nav_menu.css' />
+  <link rel='stylesheet' href='css/home.css' />
+  <link rel='stylesheet' href='consts/vars.css' />
+  <link rel='stylesheet' href='css/fonts.css' />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src=scripts/script.js></script>
+  <script src=scripts/home.js></script>
+  <script src='node_modules/showdown/dist/showdown.js'></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      $("#template_footer").load("footer.html");
+      $("#template_header").load("header.html");
+    });
+  </script>
+</head>
+
+
+<body>
+  <div class='container__main'>
+    <main>
+      <div id='template_header'></div>
+
+
+      <!-- <body class='home_image'></body> -->
+
+      <div id='image' class='image1'></div>
+
+      <div class='main_content'>
+        <rect class='rect2'>
+          <div style='padding: 20px 10px;'>
+            <b>
+              <h2>Your download will start shortly...</h2>
+              <hr class='hr_gradient'>
+            </b>
+            <p>
+              Just install the file
+            </p>
+          </div>
+        </rect>
+        <rect>
+          <div class='rect_div'>
+            <b>
+              <h2>Instructions</h2>
+              <hr>
+            </b>
+            <p>
+              Just install the file
+            </p>
+            <a class='collapsible_btn'>
+              <h3>How to my get system bitness?</h3><span>&#9650;</span>
+            </a>
+            
+            <div class='collapsible'>
+              <br>
+              <h2><b>Linux</b></h2>
+              <hr>
+              <br>
+              <p>
+                Open the CLI to a Linux server by SSH using Putty.<br>
+                Type the following command line:
+                <code>uname –a</code>
+              </p>
+              <h3>Sample output</h3>
+              <p>
+                <code>$ getconf LONG_BIT</code>
+                <br>
+
+                <hr>
+                <i>x86_64 GNU/Linux</i> indicates it's a <b>64 bit</b> Linux kernel.<br>
+                <hr class='hr_small'>
+                <i>i386/i486/i586/i686</i> indicates it's a <b>32 bit</b> Linux kernel
+                <hr>
+              </p>
+              <br>
+              <h2><b>Windows</b></h2>
+              <p>
+                <br>
+                Open the CLI to a Linux server by SSH using Putty.<br>
+                Type the following command line:
+
+                <br><br><code>uname –a</code><br><br>
+
+              </p>
+              <h3>Sample output</h3>
+              <p>
+                <code>$ getconf LONG_BIT</code>
+                <br>
+
+                <i>x86_64 GNU/Linux</i> indicates it's a <b>64 bit</b> Linux kernel.<br>
+                <i>i386/i486/i586/i686</i> indicates it's a <b>32 bit</b> Linux kernel
+              </p>
+            </div>
+          </div>
+        </rect>
+
+        <b>
+          <h1 style='text-shadow: 0 6px 20px black;'>Thank you</h1>
+        </b>
+
+
+        <a class='download_btn' href='javascript:history.back()'>
+          <span>&larr; Back</span>
+        </a>
+
+        <h4 class='downloading_text'>Your download will start shortly...</h4>
+
+
+        <div id='main_text' class='main_text'></div>
+
+
+
+        <div class='box1'>
+          <p style='font-weight: lighter;'>Game is released play now fastom</p>
+        </div>
+
+        <section class='frame2'>
+          <div class="frame2__wrap">
+            <h2>Cool things happening</h2>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+
+  <div id='template_footer'></div>
+
+
+  <div id='popup' class='popup'>
+    <div class="popup__background"></div>
+    <div class="popup_window">
+      <div class="popup__header">
+        <h3 style='color: hsl(0 0% 70%);' id='PopupTitle'>Title</h3>
+        <h3>
+          <div class="close_btn" onclick='toggle_popup()'>
+            &times;
+          </div>
+        </h3>
+      </div>
+      <div style='padding: 20px 40px;' class="popup_content">
+        <p id='PopupContentText'>Hel lo</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+</html>
