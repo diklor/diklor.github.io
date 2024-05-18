@@ -18,10 +18,7 @@
   <script src='node_modules/showdown/dist/showdown.js'></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script>
-    $(function () {
-      $("#template_footer").load("footer.html");
-      $("#template_header").load("header.html");
-    });
+    
   </script>
 </head>
 
@@ -37,34 +34,29 @@
       <div id='image' class='image1'></div>
 
       <div class='main_content'>
-        <rect class='rect2'>
-          <div style='padding: 20px 10px;'>
+        <rect style='width: 100%;' class='rect2'>
+          <div class='rect_div'>
             <b>
               <h2>Your download will start shortly...</h2>
               <hr class='hr_gradient'>
             </b>
-            <p>
-              Just install the file
-            </p>
+            <p>If the download has not started, <a>click here</a></p>
           </div>
         </rect>
         <rect>
           <div class='rect_div'>
-            <b>
-              <h2>Instructions</h2>
-              <hr>
-            </b>
-            <p>
-              Just install the file
-            </p>
+            <h2><b>Instructions</b></h2>
+            <hr>
+            <p>Just install the file</p>
             <a class='collapsible_btn'>
               <h3>How to my get system bitness?</h3><span>&#9650;</span>
             </a>
 
             <div class='collapsible'>
               <br>
-              <h2><b><img width='30' height='30' src='/assets/images/windows.png' title='Windows' alt='Windows'>&nbsp;
-                  Windows</b></h2>
+              <!-- <h2><b><img width='30' height='30' src='/assets/images/windows.png' title='Windows' alt='Windows'>&nbsp; -->
+              <h2><b><img class='icon' src='/assets/images/windows.png' alt='Windows'>&nbsp;Windows</b>
+              </h2>
               <hr> <br>
               <p>
                 1. Press <mark>Win + R</mark><br>
@@ -82,7 +74,7 @@
               <br> <br>
               <br> <br>
 
-              <h2><b><img width='30' height='30' src='/assets/images/linux.png' title='Linux' alt='Linux'>&nbsp;
+              <h2><b><img class='icon' src='/assets/images/linux.png' alt='Linux'>&nbsp;
                   Linux</b></h2>
               <hr> <br>
               <p>
@@ -102,7 +94,7 @@
               <br> <br>
 
               <br>
-              <h2><b><img width='30' height='30' src='/assets/images/apple.png' title='Mac OS' alt='Mac OS'>&nbsp;
+              <h2><b><img class='icon' src='/assets/images/apple.png' alt='Mac OS'>&nbsp;
                   Mac OS</b></h2>
               <hr> <br>
               <p>Execute this:</p>

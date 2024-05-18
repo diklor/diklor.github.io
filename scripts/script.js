@@ -1,4 +1,8 @@
 window.onload = function () {
+    console.log('dasdasdasdadasdasdsdfdasdfs');
+    toggle_menu()
+
+    $("#template_footer").load("footer.html");
     $("#template_header").load("header.html");
 }
 
@@ -45,9 +49,4 @@ function load_page(page_path) {
             console.error(error)
             toggle_popup('Error', error);
         });
-}
-
-window.onload = function () {
-    console.log('dasdasdasdadasdasdsdfdasdfs');
-    toggle_menu()
 }
