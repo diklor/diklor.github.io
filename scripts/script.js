@@ -1,6 +1,7 @@
 window.onload = function () {
     console.log('dasdasdasdadasdasdsdfdasdfs');
-    toggle_menu()
+    toggle_menu();
+    load_collapsibles();
 
     $("#template_footer").load("footer.html");
     $("#template_header").load("header.html");
@@ -49,4 +50,46 @@ function load_page(page_path) {
             console.error(error)
             toggle_popup('Error', error);
         });
+}
+
+
+function load_script(url) {
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    head.appendChild(script);
+}
+
+
+
+function download() {
+    console.log(window.location.pathname);
+    const path_name = window.location.pathname.trimEnd('.html').trimStart('/');
+
+    var download_url = 'https://matix.li/23b30224815a;'
+    if (path_name.match('linux')) { download_url = 'https://matix.li/23b30224815a' }
+    else if (path_name.match('macos')) { download_url = 'https://matix.li/23b30224815a' }
+
+    window.open(download_url, '_self')
+}
+
+
+
+self.addEventListener("fetch", evt => {
+    if (evt.request.url.indexOf('intercept-me')) {
+        $('#image').remove();
+    }
+})
+
+
+
+
+function load_collapsibles() {
+    $('.collapsible_btn').each(function (i, el) {
+        $(this).click(function () {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+        });
+    })
 }

@@ -17,6 +17,7 @@ time, mark, audio, video {
     border-style: solid;
 	font-size: 100%;
 	vertical-align: baseline;
+    background: none;
 }
 /* html5 */
 article, aside, details, figcaption, figure, 
@@ -103,7 +104,7 @@ main { overflow: auto; }
 
 rect { /* rect { */
     background: linear-gradient(to bottom, hsl(0 0% 10%), hsl(0 0% 2%));
-    box-shadow: inset 0 0 60px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 60px 0 rgba(0, 0, 0, 0.4), 0 0 30px 10px rgba(0, 0, 0, 0.9);
     width: 1000px;
     padding: 24px;
 }
@@ -199,11 +200,12 @@ header {
 
     box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, 0.4);
 }
-.logo_label { 
-    color: red;
-    font-size: 26px;
+.logo_label p { 
+    color: white;
+    font-size: 32px;
     padding: 16px 30px;
     font-family: 'Bebas Neue';
+    cursor: pointer;
 }
 
 
@@ -410,6 +412,61 @@ mark {
 
 br { user-select: none; }
 
+
+
+
+/* Tables */
+
+table {
+    width: 700px;
+    background: none;
+}
+
+th {
+    background: linear-gradient(to bottom, red, darkred);
+    color: hsl(0 0% 80%);
+    box-shadow: inset 0 12px 20px rgba(100, 0, 0, 1);
+}
+
+th, td {
+    --border-radius: 14px;
+    padding: 16px;
+    vertical-align: middle;
+}
+
+
+th:first-child { border-top-left-radius: var(--border-radius);}
+th:last-child { border-top-right-radius: var(--border-radius);}
+tr:last-child td:first-child { border-bottom-left-radius: var(--border-radius);}
+tr:last-child td:last-child { border-bottom-right-radius: var(--border-radius);}
+
+
+
+
+
+tr td {
+    background: gray;
+    border-top: 2px solid hsl(0 0% 10%);
+    box-shadow: inset 0 0 30px rgba(0 ,0, 0, 0.6);
+    transition: padding-left 0.3s;
+}
+tr:nth-child(odd) td { background: hsl(0 0% 30%); }
+
+tr:hover td { text-shadow: 0 0 10px hsla(0, 0%, 100%, 0.5); }
+tr td:first-child:before { /* Circle */
+    content: '•';
+    color: white;
+    font-size: 0px;
+    transition: font-size 0.3s, color 0.2s;
+    vertical-align: middle;
+ }
+ tr:hover td:first-child:before {
+    font-size: 100%;
+ }
+
+
+
+/* Tables end */
 
 
 @media screen and (max-width: 810px) {
